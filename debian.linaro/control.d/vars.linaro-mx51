@@ -1,0 +1,8 @@
+arch="armel"
+supported="Freescale i.MX51"
+desc="Freescale i.MX51 based platforms"
+target="Freescale Babbage platform"
+bootloader="uboot-mkimage, flash-kernel"
+provides=""
+section_image="universe/base"
+do_debug="Yes"

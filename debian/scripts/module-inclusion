@@ -5,7 +5,7 @@
 # The includsion list format must be a bash regular expression.
 #
 # usage: $0 ROOT INCLUSION_LIST
-# example: $0 debian/build/build-virtual debian.master/control.d/virtual.inclusion-list
+# example: $0 debian/build/build-virtual debian.linaro/control.d/virtual.inclusion-list
 ROOT=$1
 ILIST=$2
 

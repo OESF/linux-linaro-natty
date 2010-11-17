@@ -93,7 +93,7 @@ endif
 
 printchanges:
 	@baseCommit=$$(git log --pretty=format:'%H %s' | \
-		awk '/UBUNTU: '".*Ubuntu-$(release)-$(prev_revision)"'$$/ { print $$1; exit }'); \
+		awk '/LINARO: '".*Linaro-$(release)-$(prev_revision)"'$$/ { print $$1; exit }'); \
 		git log "$$baseCommit"..HEAD | \
 		perl -w -f $(DROOT)/scripts/misc/git-ubuntu-log $(ubuntu_log_opts)
 

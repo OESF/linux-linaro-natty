@@ -1,0 +1,308 @@
+linux-linaro (2.6.35-1008.15) maverick-proposed; urgency=low
+
+  [ Robert Nelson ]
+
+  * SRU: Fix DVI for Beagle xM rev A3
+    - LP: #663642
+
+ -- John Rigby <john.rigby@linaro.org>  Thu, 21 Oct 2010 11:01:14 -0600
+
+linux-linaro (2.6.35-1008.14) maverick-proposed; urgency=low
+
+  [ Andy Whitcroft ]
+
+  * reduce disk usage during buildd builds
+    - LP: #645653
+
+  [ Enric Balletbo i Serra ]
+
+  * ARM: igepv2: Adding support for VBUS and overcurrent
+    - LP: #651589
+  * ARM: igepv2: Fix and improve LED handling
+    - LP: #654582
+  * ARM: igepv2: Introduce function to dectect HW version
+    - LP: #654586
+  * ARM: igepv2: Fix handling of GPIOs for WLAN-BT combo
+    - LP: #654590
+  * ARM: igepv2: Add i2c eeprom driver to read EDID
+    - LP: #654594
+  * ARM: igepv2: Remove VMMC2 regulator
+    - LP: #654595
+
+  [ Maurus Cuelenaere ]
+
+  * SAUCE: ARM: OMAP3: Add S-Video output to IGEPv2 board
+    - LP: #607250
+
+  [ Upstream Stable ]
+  * Linux 2.6.35.7
+
+  [ Upstream MMC updates ]
+
+  * mmc: recognize CSD structure
+  * mmc: split mmc_sd_init_card()
+  * mmc: implement SD-combo (IO+mem) support
+  * sdhci: remove useless set_clock() check
+  * sdhci: 8-bit data transfer width support
+  * sdhci: don't assign mmc->caps at SDHCI directly
+  * mmc: only set blockaddressed for > 2GiB cards
+  * mmc: omap: fix for bus width which improves SD card's peformance.
+  * sdhci-pltfm: switch to module device table matching
+  * sdhci-pltfm: reorganize Makefile entries to support SoC devices
+  * sdhci-pltfm: add support for CNS3xxx SoC devices
+  * omap hsmmc: fix processing of all dma interrupts as block completion
+  * sdhci: add regulator support
+  * sdhci: add no hi-speed bit quirk support
+  * mmc: avoid getting CID on SDIO-only cards
+  * omap_hsmmc: remove unused local `state'
+  * omap hsmmc: fix a racing case between kmmcd and omap_hsmmc_suspend
+  * drivers/mmc/host/imxmmc.c: adjust confusing if indentation
+  * mmc: sdhci-pltfm: Add structure for host-specific data
+  * mmc: sdhci-pltfm: move .h file into appropriate subdir
+  * mmc: sdhci: introduce get_ro private write-protect hook
+  * mmc: sdhci_pltfm: pass more data on custom init call
+  * mmc: sdhci-of-esdhc: factor out common stuff
+  * mmc: sdhci-pltfm: add -pltfm driver for imx35/51
+  * mmc: quirk fix for timeout problem
+  * babbage: esdhc device registration
+  * babbage: update mx51_defconfig
+    - LP: #656966
+
+
+  [ Upstream ARM fixes ]
+
+  * Make PTRACE_SINGLESTEP work with user helpers
+  * ARM: fix section mismatch warnings in Versatile Express
+  * ARM: use memblock to remove memory from available memory
+  * video: omap: vram: remove from normal memory
+    - LP: #627779
+
+  [ John Rigby ]
+  * LINARO: update configs
+    - LP: #659799
+
+ -- John Rigby <john.rigby@linaro.org>  Tue, 19 Oct 2010 16:09:52 -0600
+
+linux-linaro (2.6.35-1007.13) maverick; urgency=low
+
+  [ Upstream Ubuntu ]
+
+  * Ubuntu-2.6.35-22.33
+  * Ubuntu-2.6.35-22.34
+
+  [ Upstream ARM Fixes ]
+
+  * ARM: vexpress: set RAM latencies to 1 cycle for PL310 on ct-ca9x4 tile
+  * ARM: vexpress: set RAM latencies to 1 cycle for PL310 on ct-ca9x4 tile
+  * ARM: add a vma entry for the user accessible vector page
+  * ARM: plug a race with the alignment trap handler
+  * arm: fix really nasty sigreturn bug
+  * ARM: prevent multiple syscall restarts
+  * ARM: 6387/1: errata: check primary part ID in proc-v7.S
+  * ARM: 6388/1: errata: DMB operation may be faulty
+  * ARM: 6389/1: errata: incorrect hazard handling in the SCU may lead to
+    data corruption
+  * ARM: 6398/1: add proc info for ARM11MPCore/Cortex-A9 from ARM
+  * kconfig: delay symbol direct dependency initialization
+  * ARM: kprobes-decode: add support for MOVW instruction
+  * ARM: errata: check primary part ID in proc-v7.S
+  * ARM: errata: DMB operation may be faulty
+  * ARM: errata: incorrect hazard handling in the SCU may lead to data
+    corruption
+  * ARM: errata: faulty hazard checking in the Store Buffer may lead to
+    data corruption
+  * ARM: Fix HWCAP_TLS flag for ARM11MPCore/Cortex-A9
+
+  [ Ricardo Salveti ]
+  * ARM: OMAP3: Add S-Video output to IGEPv2 board
+    - LP: #607250
+  * ARM: OMAP3: Adding vdd_sdi regulator supply to IGEPv2 board
+    - LP: #607250
+
+  [ Upstream Stable Releases ]
+  * 2.6.35.5
+  * 2.6.35.6
+
+  [ Upstream ftrace support ]
+
+  * ARM: 6312/1: ftrace: allow building without frame pointers
+  * ARM: 6314/1: ftrace: allow build without frame pointers on ARM
+  * ARM: 6315/1: ftrace: add ENDPROC annotations
+  * ARM: 6316/1: ftrace: add Thumb-2 support
+  * ARM: 6317/1: ftrace: pass KBUILD_CFLAGS to record_mcount.pl
+  * ARM: 6318/1: ftrace: fix and update dynamic ftrace
+  * ARM: 6319/1: ftrace: add Thumb-2 support to dynamic ftrace
+  * ARM: 6320/1: ftrace: enable dynamic ftrace
+
+  [ Nicolas Pitre ]
+
+  * ARM: implement CONFIG_STRICT_DEVMEM by disabling access to RAM via
+    /dev/mem
+  * ARM: bring SECCOMP behavior in sync with the version in mainline
+  * ARM: do not define VMALLOC_END relative to PAGE_OFFSET
+
+  [ John Rigby ]
+
+  * LINARO: Start new release
+  * LINARO: Bump ABI
+  * LINARO: update configs
+
+ -- John Rigby <john.rigby@linaro.org>  Thu, 07 Oct 2010 17:58:05 -0600
+
+linux-linaro (2.6.35-1006.12) maverick; urgency=low
+
+  [ John Rigby ]
+
+  * Revert "LINARO: [Config] workaround for kernel-wedge error on empty
+    udebs"
+  * LINARO: Start new release
+  * LINARO: no mouse-modules for linaro-vexpress
+  * LINARO: Add tools section to debian.linaro/control.stub.in
+    - LP: #643462
+
+ -- John Rigby <john.rigby@linaro.org>  Mon, 20 Sep 2010 10:20:21 -0600
+
+linux-linaro (2.6.35-1006.11) maverick; urgency=low
+
+  [ Upstream Kernel Changes ]
+
+  * ARM: vexpress: set RAM latencies to 1 cycle for PL310 on ct-ca9x4 tile
+    - LP: #633417
+  * ARM: add a vma entry for the user accessible vector page
+  * ARM: plug a race with the alignment trap handler
+  * ARM: SECCOMP support
+
+  [ John Rigby ]
+
+  * LINARO: rebase on linux-linaro-2.6.35-16Sep2010 and Ubuntu-2.6.35-22.32 merge
+  * LINARO: [CONFIG] igep ethernet fix
+  * LINARO: [CONFIG] turn do_tools on
+    - LP: #618734
+
+ -- John Rigby <john.rigby@linaro.org>  Thu, 16 Sep 2010 18:03:14 -0600
+
+linux-linaro (2.6.35-1005.10) maverick; urgency=low
+
+  [ Upstream Kernel Changes ]
+
+  * mmc: build fix: mmc_pm_notify is only available with CONFIG_PM=y
+
+  [ John Rigby ]
+
+  * LINARO: rebase on linux-linaro-2.6.35 and Ubuntu-2.6.35-20.29 merge
+  * LINARO: [Config] Turn on CONFIG_HIGHMEM for vexpress
+  * LINARO: Update Vcs-Git
+  * LINARO: add Recommends uboot-mkimage
+    - LP: #628848
+
+ -- John Rigby <john.rigby@linaro.org>  Wed, 08 Sep 2010 10:03:22 -0600
+
+linux-linaro (2.6.35-1004.9) maverick; urgency=low
+
+  [ Upstream Kernel Changes ]
+
+  * ARM: OMAP: Beagle: revision detection
+    - LP: #613855
+  * ARM: OMAP: Beagle: only Cx boards use pin 23 for write protect
+    - LP: #613855
+  * ARM: OMAP: Beagle: no gpio_wp pin connection on xM
+    - LP: #613855
+  * OMAP: DSS2: OMAPFB: use phys_to_virt for RAM mappings
+    - LP: #624115
+
+ -- John Rigby <john.rigby@linaro.org>  Fri, 27 Aug 2010 20:27:29 -0600
+
+linux-linaro (2.6.35-1004.8) maverick; urgency=low
+
+  [ John Rigby ]
+
+  * LINARO: rebase on linux-linaro-2.6.35 and Ubuntu-2.6.35-19.25 merge
+
+ -- John Rigby <john.rigby@linaro.org>  Wed, 25 Aug 2010 19:46:17 -0600
+
+linux-linaro (2.6.35-1003.7) maverick; urgency=low
+
+  [ John Rigby ]
+
+  * LINARO: [Config] Fix vexpress config
+  * LINARO: [Config] Add mx51 flavour
+  * LINARO: [config] Update vexpress config
+     Enable USB mass storage as a module
+     Enable SCSI disk support
+
+ -- John Rigby <john.rigby@linaro.org>  Sun, 22 Aug 2010 21:29:44 -0600
+
+linux-linaro (2.6.35-1002.6) maverick; urgency=low
+
+  [ Tim Gardner ]
+
+  * [Config] Find ABI files according to their source package name
+  * [Config] getabi: Only get armel omap and vexpress
+
+  [ John Rigby ]
+
+  * [Config] Changed flavour names from {omap,vexpress} to
+    linaro-{omap,vexpress}
+
+ --  Tim Gardner <tim.gardner@canonical.com>  Tue, 17 Aug 2010 15:57:51 +0100
+
+linux-linaro (2.6.35-1001.5) maverick; urgency=low
+
+  * New upstream trees
+    
+    Merge of linaro_merge_100811 and Ubuntu-2.6.35-15.21
+    
+    Conflicts:
+        arch/arm/mach-omap2/board-4430sdp.c
+    
+            linaro_merge_100811 added sdp4430_leds_gpio to sdp4030_devices
+            Ubuntu 2.6.35-15.21 added sdp4430_nop_usb_device to sdp4030_devices
+    
+            resolution was to just add both
+
+  * Fold in packaging from 2.6.35-1000.4
+  * [Config] Update configs for new upstream
+  * omap3 nand: fix missing parameter to gpmc_prefetch_reset
+
+ -- John Rigby <john.rigby@linaro.org>  Wed, 11 Aug 2010 14:20:28 -0600
+
+linux-linaro (2.6.35-1000.4) maverick; urgency=low
+
+  [ John Rigby ]
+
+  * LINARO: replace debian.master with debian.linaro
+  * LINARO: Add vexpress flavour
+
+ -- John Rigby <john.rigby@linaro.org>  Tue, 10 Aug 2010 10:23:30 -0600
+
+linux-linaro (2.6.35-1000.3) maverick; urgency=low
+
+  [ John Rigby ]
+
+  * LINARO: cleanup debian.linaro control file
+
+ -- John Rigby <john.rigby@linaro.org>  Tue, 03 Aug 2010 10:16:29 -0600
+
+linux-linaro (2.6.35-1000.2) maverick; urgency=low
+
+  [ John Rigby ]
+
+  * Bump upload number to workaround launchpad upload rejection
+
+ -- John Rigby <john.rigby@linaro.org>  Wed, 28 Jul 2010 11:20:13 -0600
+
+linux-linaro (2.6.35-1000.1) maverick; urgency=low
+
+  [ Linaro Kernel Changes ]
+
+  * Turn off CONFIG_SPARSE_IRQ
+
+ -- John Rigby <john.rigby@linaro.org>  Tue, 27 Jul 2010 17:17:39 -0600
+
+linux-linaro (2.6.35-1000.0) maverick; urgency=low
+
+  [ John Rigby ]
+
+  * Initial Linaro linux tree
+
+ -- John Rigby <john.rigby@linaro.org>  Tue, 27 Jul 2010 11:34:30 -0600
