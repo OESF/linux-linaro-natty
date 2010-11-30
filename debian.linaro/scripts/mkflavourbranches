@@ -1,0 +1,105 @@
+#!/bin/bash
+#set -x
+#set -e
+
+DEBIAN=debian.linaro
+source_pkg_name=$(dpkg-parsechangelog -l${DEBIAN}/changelog|grep Source|sed 's/^.*Source: //')
+source_pkg_version=$(dpkg-parsechangelog -l${DEBIAN}/changelog|grep Version|sed 's/^.*Version: //')
+common_flavour_prefix=linaro
+
+
+function fail {
+    echo $1
+    exit -1
+}
+
+function checkclean {
+    status=$(git status -s)
+    test -z "$status" || fail "Only run this script in a clean repo"
+}
+
+function setup_working_branch {
+    hoser=$(git branch -a | grep "  $1$")
+    test -z "$hoser" || fail "$1 already exists"
+    git checkout -b $1
+}
+
+function cleanup {
+    git reset --hard  HEAD
+    git clean -d -f -x
+}
+
+flavours=(${DEBIAN}/control.d/vars.*)
+flavours=(${flavours[*]##*vars.${common_flavour_prefix}-})
+firstflavour=${flavours[0]}
+
+function do_flavour_branches {
+    for flavour in ${flavours[*]}; do
+        echo flavour is $flavour
+        otherflavours=(${flavours[*]##$flavour})
+        echo otherflavours are ${otherflavours[*]}
+
+        single_flavour_branch=${working_branch}-$flavour-only
+        git branch -f $single_flavour_branch HEAD
+        git checkout $single_flavour_branch
+
+        sed -i -e "s/^${source_pkg_name}/${source_pkg_name}-$flavour/" ${DEBIAN}/changelog
+        git add ${DEBIAN}/changelog
+
+        for otherflavour in ${otherflavours[*]}; do
+            git rm ${DEBIAN}/config/armel/config.flavour.${common_flavour_prefix}-$otherflavour
+            git rm ${DEBIAN}/control.d/vars.${common_flavour_prefix}-$otherflavour
+            sed -i -e "/${common_flavour_prefix}-$otherflavour/d" ${DEBIAN}/d-i/kernel-versions.in
+            git add ${DEBIAN}/d-i/kernel-versions.in
+            sed -i -e "s/${common_flavour_prefix}-$otherflavour//" ${DEBIAN}/rules.d/armel.mk
+            if [ "$flavour" = "$firstflavour" ]; then
+                # for first flavour only make the common header and tools deb
+                sed -i -e "s/do_common_headers_indep.*=.*/do_common_headers_indep = false/" ${DEBIAN}/rules.d/armel.mk
+                sed -i -e "s/do_tools.*=.*/do_tools = true/" ${DEBIAN}/rules.d/armel.mk
+            else
+                sed -i -e "s/do_common_headers_indep.*=.*/do_common_headers_indep = true/" ${DEBIAN}/rules.d/armel.mk
+                sed -i -e "s/do_tools.*=.*/do_tools = false/" ${DEBIAN}/rules.d/armel.mk
+            fi
+            git add ${DEBIAN}/rules.d/armel.mk
+        done
+
+        git status
+        git commit -s -m "LINARO: Linaro-${source_pkg_version} $flavour only"
+        tagname="Linaro-${source_pkg_version}-${flavour}-only"
+        git tag -f -s -m "$tagname" $tagname HEAD
+
+
+        git push $remote_push -f HEAD:$flavour-only
+        git push $remote_push -f $tagname
+
+        git reset --hard HEAD
+        git checkout $working_branch
+
+        cleanup
+    done
+}
+
+test $# -eq 2 || fail "must provide working branch name and a pushable remote"
+working_branch=$1
+remote_push=$2
+
+
+orig_branch=$(git symbolic-ref HEAD 2>/dev/null)
+orig_branch=${orig_branch##refs/heads/}
+
+checkclean
+
+setup_working_branch $working_branch
+
+git push $remote_push -f $working_branch:master
+tagname="Linaro-${source_pkg_version}"
+git tag -f -s -m "$tagname" $tagname HEAD
+git push $remote_push -f $tagname
+
+do_flavour_branches
+
+git checkout $orig_branch
+
+
+cleanup
+
