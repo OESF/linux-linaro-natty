@@ -91,16 +91,18 @@ $(DEBIAN)/control.stub: $(DEBIAN)/d-i/kernel-versions.in	\
 	  new=`echo $$i | sed 's/\.in$$//'`;					\
 	  cat $$i | sed -e 's/PKGVER/$(release)/g'                              \
 	        -e 's/ABINUM/$(abinum)/g'                                       \
+		-e 's/SRCPKGNAMENF/$(src_pkg_name_no_flavour)/g'          \
 		-e 's/SRCPKGNAME/$(src_pkg_name)/g'                             \
 	  > $$new;								\
 	done
 	flavours="$(wildcard $(DEBIAN)/control.d/vars.* $(DEBIAN)/sub-flavours/*.vars)";\
 	for i in $$flavours; do							\
-	  $(SHELL) $(DROOT)/scripts/control-create $$i |				\
+	  $(SHELL) $(DROOT)/scripts/control-create $$i |			\
 		sed -e 's/PKGVER/$(release)/g'                                  \
 		-e 's/ABINUM/$(abinum)/g'                                       \
+		-e 's/SRCPKGNAMENF/$(src_pkg_name_no_flavour)/g'          \
 		-e 's/SRCPKGNAME/$(src_pkg_name)/g'                             \
-		>> $(DEBIAN)/control.stub;						\
+		>> $(DEBIAN)/control.stub;					\
 	done
 	cp $(DEBIAN)/control.stub $(DEBIAN)/control
 

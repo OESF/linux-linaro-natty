@@ -19,7 +19,7 @@ Description: Header files related to Linux kernel version PKGVER
  that want the latest kernel headers. Please read
  /usr/share/doc/SRCPKGNAME-headers-PKGVER-ABINUM/debian.README.gz for details
 
-Package: linux-linaro-tools-PKGVER-ABINUM
+Package: SRCPKGNAMENF-tools-PKGVER-ABINUM
 Architecture: armel
 Section: devel
 Priority: optional
