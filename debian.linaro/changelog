@@ -4,6 +4,16 @@ linux-linaro (2.6.37-1003.6) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ John Rigby ]
+
+  * rebase to new upstreams:
+    linaro-linux-2.6.37-upstream-24Jan2011
+    Ubuntu-2.6.37-12.28
+       Skipping because of conflicting upstream patches:
+         ARM: stack protector: change the canary value per task
+         Revert "ARM: stack protector: change the canary value per task"
+         UBUNTU: SAUCE: ARM: OMAP: Beagle: support twl gpio differences on xM
+
  -- John Rigby <john.rigby@linaro.org>  Mon, 24 Jan 2011 17:38:49 -0700
 
 linux-linaro (2.6.37-1002.5) natty; urgency=low
