@@ -25,9 +25,9 @@ Package: linux-image-PKGVER-ABINUM-FLAVOUR
 Architecture: ARCH
 Section: admin
 Priority: optional
-Pre-Depends: dpkg (>= 1.10.24)
+Pre-Depends: dpkg (>= 1.10.24), debconf | debconf-2.0
 #Provides: linux-image, linux-image-2.6, fuse-module, =PROVIDES=
-Depends: ${misc:Depends}, ${shlibs:Depends}, initramfs-tools (>= 0.36ubuntu6), coreutils | fileutils (>= 4.0), module-init-tools (>= 3.3-pre11-4ubuntu3), wireless-crda
+Depends: ${misc:Depends}, ${shlibs:Depends}, initramfs-tools (>= 0.36ubuntu6), module-init-tools (>= 3.3-pre11-4ubuntu3), wireless-crda
 Conflicts: hotplug (<< 0.0.20040105-1)
 Recommends: BOOTLOADER
 Suggests: fdutils, SRCPKGNAME-doc-PKGVER | SRCPKGNAME-source-PKGVER, COMMONSRCPKGNAME-tools
@@ -51,14 +51,15 @@ Package: linux-headers-PKGVER-ABINUM-FLAVOUR
 Architecture: ARCH
 Section: devel
 Priority: optional
-Depends: ${misc:Depends}, coreutils | fileutils (>= 4.0), linux-headers-PKGVER-ABINUM, ${shlibs:Depends}
+Depends: ${misc:Depends}, linux-headers-PKGVER-ABINUM, ${shlibs:Depends}
 #Provides: SRCPKGNAME-headers, SRCPKGNAME-headers-2.6
 Description: Linux kernel headers for version PKGVER on DESC
  This package provides kernel header files for version PKGVER on
  DESC.
  .
  This is for sites that want the latest kernel headers.  Please read
- /usr/share/doc/SRCPKGNAME-headers-PKGVER-ABINUM/debian.README.gz for details.
+ /usr/share/doc/SRCPKGNAME-headers-PKGVER-ABINUM/debian.README.gz
+ for details.
 
 Package: linux-image-PKGVER-ABINUM-FLAVOUR-dbgsym
 Architecture: ARCH
