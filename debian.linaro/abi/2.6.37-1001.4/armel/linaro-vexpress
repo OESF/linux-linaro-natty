@@ -2767,6 +2767,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	set_irq_data
 EXPORT_SYMBOL vmlinux 0x00000000	set_irq_type
 EXPORT_SYMBOL vmlinux 0x00000000	set_irq_wake
 EXPORT_SYMBOL vmlinux 0x00000000	set_normalized_timespec
+EXPORT_SYMBOL vmlinux 0x00000000	set_notify_swap_entry_free
 EXPORT_SYMBOL vmlinux 0x00000000	set_page_dirty
 EXPORT_SYMBOL vmlinux 0x00000000	set_page_dirty_lock
 EXPORT_SYMBOL vmlinux 0x00000000	set_security_override
@@ -4415,6 +4416,8 @@ EXPORT_SYMBOL_GPL vmlinux 0x00000000	anon_transport_class_register
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	anon_transport_class_unregister
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	apply_to_page_range
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	arm_pm_restart
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	armpmu_get_max_events
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	armpmu_get_pmu_id
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	async_schedule
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	async_schedule_domain
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	async_synchronize_cookie
@@ -4789,6 +4792,9 @@ EXPORT_SYMBOL_GPL vmlinux 0x00000000	ipv6_find_tlv
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	ipv6_opt_accepted
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	irq_get_irq_data
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	irq_set_affinity_hint
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	irq_work_queue
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	irq_work_run
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	irq_work_sync
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	kallsyms_lookup_name
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	kallsyms_on_each_symbol
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	kbd_table
@@ -4870,6 +4876,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x00000000	mnt_clone_write
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	mnt_drop_write
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	mnt_want_write
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	mnt_want_write_file
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	modify_user_hw_breakpoint
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	module_mutex
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	monotonic_to_bootbased
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	mount_mtd
@@ -4896,6 +4903,13 @@ EXPORT_SYMBOL_GPL vmlinux 0x00000000	page_mkclean
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	parse_mtd_partitions
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	part_round_stats
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	pcpu_base_addr
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	perf_event_create_kernel_counter
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	perf_event_read_value
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	perf_event_release_kernel
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	perf_num_counters
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	perf_register_guest_info_callbacks
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	perf_swevent_get_recursion_context
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	perf_unregister_guest_info_callbacks
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	pid_vnr
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	platform_add_devices
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	platform_bus
@@ -4975,7 +4989,9 @@ EXPORT_SYMBOL_GPL vmlinux 0x00000000	register_oom_notifier
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	register_pernet_device
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	register_pernet_subsys
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	register_posix_clock
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	register_user_hw_breakpoint
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	register_vt_notifier
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	register_wide_hw_breakpoint
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	release_pmu
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	remove_irq
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	request_any_context_irq
@@ -5228,6 +5244,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x00000000	unlock_flocks
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	unmap_urb_for_dma
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	unmap_urb_setup_for_dma
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	unregister_die_notifier
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	unregister_hw_breakpoint
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	unregister_keyboard_notifier
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	unregister_mtd_user
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	unregister_net_sysctl_table
@@ -5236,6 +5253,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x00000000	unregister_oom_notifier
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	unregister_pernet_device
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	unregister_pernet_subsys
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	unregister_vt_notifier
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	unregister_wide_hw_breakpoint
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	unshare_fs_struct
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	unuse_mm
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	usb_add_hcd
