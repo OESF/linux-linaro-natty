@@ -42,6 +42,7 @@
 #include <linux/slab.h>
 #include <trace/timer.h>
 
+#include <asm/byteorder.h>
 #include <asm/uaccess.h>
 #include <asm/unistd.h>
 #include <asm/div64.h>
@@ -59,6 +60,14 @@ EXPORT_SYMBOL(jiffies_64);
 DEFINE_TRACE(timer_set);
 DEFINE_TRACE(timer_update_time);
 DEFINE_TRACE(timer_timeout);
+
+#ifdef CONFIG_X86
+#if defined(__LITTLE_ENDIAN) || (BITS_PER_LONG >= 64)
+asm(".global jiffies; jiffies = jiffies_64");
+#else
+asm(".global jiffies; jiffies = jiffies_64 + 4");
+#endif
+#endif
 
 /*
  * per-CPU timer vector definitions:
