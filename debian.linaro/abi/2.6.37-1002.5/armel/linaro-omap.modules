@@ -431,6 +431,7 @@ gl520sm
 gl620a
 gluebi
 gpio_keys
+gpio_keys_polled
 gpio_mouse
 gpio_vbus
 grip

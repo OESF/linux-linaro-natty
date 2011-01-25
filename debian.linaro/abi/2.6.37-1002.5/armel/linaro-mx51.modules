@@ -57,6 +57,7 @@ garp
 girbil-sir
 gl620a
 gpio_keys
+gpio_keys_polled
 gpio_mouse
 gpio_vbus
 hid

@@ -964,6 +964,7 @@ EXPORT_SYMBOL vmlinux 0x00000000	blk_iopoll_init
 EXPORT_SYMBOL vmlinux 0x00000000	blk_iopoll_sched
 EXPORT_SYMBOL vmlinux 0x00000000	blk_limits_io_min
 EXPORT_SYMBOL vmlinux 0x00000000	blk_limits_io_opt
+EXPORT_SYMBOL vmlinux 0x00000000	blk_limits_max_hw_sectors
 EXPORT_SYMBOL vmlinux 0x00000000	blk_lookup_devt
 EXPORT_SYMBOL vmlinux 0x00000000	blk_make_request
 EXPORT_SYMBOL vmlinux 0x00000000	blk_max_low_pfn
@@ -2830,7 +2831,9 @@ EXPORT_SYMBOL vmlinux 0x00000000	sk_chk_filter
 EXPORT_SYMBOL vmlinux 0x00000000	sk_common_release
 EXPORT_SYMBOL vmlinux 0x00000000	sk_dst_check
 EXPORT_SYMBOL vmlinux 0x00000000	sk_filter
+EXPORT_SYMBOL vmlinux 0x00000000	sk_filter_release_rcu
 EXPORT_SYMBOL vmlinux 0x00000000	sk_free
+EXPORT_SYMBOL vmlinux 0x00000000	sk_prot_clear_portaddr_nulls
 EXPORT_SYMBOL vmlinux 0x00000000	sk_receive_skb
 EXPORT_SYMBOL vmlinux 0x00000000	sk_release_kernel
 EXPORT_SYMBOL vmlinux 0x00000000	sk_reset_timer
@@ -4366,6 +4369,7 @@ EXPORT_SYMBOL_GPL vmlinux 0x00000000	__inet_inherit_port
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	__inet_lookup_established
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	__inet_lookup_listener
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	__inet_twsk_hashdance
+EXPORT_SYMBOL_GPL vmlinux 0x00000000	__init_kthread_worker
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	__iowrite32_copy
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	__iowrite64_copy
 EXPORT_SYMBOL_GPL vmlinux 0x00000000	__ip_route_output_key
