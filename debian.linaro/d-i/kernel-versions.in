@@ -2,5 +2,6 @@
 armel	PKGVER-ABINUM	linaro-mx51	PKGVER-ABINUM-linaro-mx51	-
 armel	PKGVER-ABINUM	linaro-omap	PKGVER-ABINUM-linaro-omap	-
 armel	PKGVER-ABINUM	linaro-vexpress	PKGVER-ABINUM-linaro-vexpress	-
+armel	PKGVER-ABINUM	linaro-u8500	PKGVER-ABINUM-linaro-u8500	-
 # Ports
 # arch	version		flavour		installedname			suffix	bdep

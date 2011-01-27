@@ -1,0 +1,8 @@
+arch="armel"
+supported="ST-Ericsson U8500"
+desc="ST-Ericsson U8500 based platforms"
+target="ST-Ericsson HREF platform"
+bootloader="uboot-mkimage, flash-kernel"
+provides=""
+section_image="universe/base"
+do_debug="Yes"
