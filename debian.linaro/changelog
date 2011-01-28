@@ -8,13 +8,16 @@ linux-linaro (2.6.37-1003.6) UNRELEASED; urgency=low
 
   * rebase to new upstreams:
     linaro-linux-2.6.37-upstream-24Jan2011
-    Ubuntu-2.6.37-12.28
+    Ubuntu-2.6.37-12.26
        Skipping because of conflicting upstream patches:
          ARM: stack protector: change the canary value per task
          Revert "ARM: stack protector: change the canary value per task"
          UBUNTU: SAUCE: ARM: OMAP: Beagle: support twl gpio differences on xM
+  * Add U8500 flavour
+  * rebase to linaro-linux-2.6.37-upstream-27Jan2011
+  * Fix Ubuntu upstream version number typo
 
- -- John Rigby <john.rigby@linaro.org>  Mon, 24 Jan 2011 17:38:49 -0700
+ -- John Rigby <john.rigby@linaro.org>  Thu, 27 Jan 2011 17:26:02 -0700
 
 linux-linaro (2.6.37-1002.5) natty; urgency=low
 
@@ -22,7 +25,7 @@ linux-linaro (2.6.37-1002.5) natty; urgency=low
 
   * rebase to new upstreams: 
     v2.6.37 final
-    Ubuntu-2.6.37-12.28
+    Ubuntu-2.6.37-12.26
   * Clean up lintian errors and warnings
     - LP: #697317
 
