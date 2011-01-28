@@ -16,6 +16,7 @@ linux-linaro (2.6.37-1003.6) UNRELEASED; urgency=low
   * Add U8500 flavour
   * rebase to linaro-linux-2.6.37-upstream-27Jan2011
   * Fix Ubuntu upstream version number typo
+  * rebase to linaro-linux-2.6.37-upstream-31Jan2011
 
  -- John Rigby <john.rigby@linaro.org>  Thu, 27 Jan 2011 17:26:02 -0700
 
