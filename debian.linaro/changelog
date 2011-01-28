@@ -17,8 +17,9 @@ linux-linaro (2.6.37-1003.6) UNRELEASED; urgency=low
   * rebase to linaro-linux-2.6.37-upstream-27Jan2011
   * Fix Ubuntu upstream version number typo
   * rebase to linaro-linux-2.6.37-upstream-31Jan2011
+  * rebase to linaro-linux-2.6.37-upstream-08Feb2011
 
- -- John Rigby <john.rigby@linaro.org>  Thu, 27 Jan 2011 17:26:02 -0700
+ -- John Rigby <john.rigby@linaro.org>  Tue, 08 Feb 2011 19:56:22 -0700
 
 linux-linaro (2.6.37-1002.5) natty; urgency=low
 
