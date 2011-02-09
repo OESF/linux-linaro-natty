@@ -75,3 +75,4 @@ value CONFIG_IMA n
 value CONFIG_IPV6 y
 
 value CONFIG_PRINTK_TIME y
+value CONFIG_PM_DEBUG y

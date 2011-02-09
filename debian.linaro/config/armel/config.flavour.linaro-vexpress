@@ -151,7 +151,6 @@ CONFIG_FB_CFB_IMAGEBLIT=y
 # CONFIG_FIXED_PHY is not set
 # CONFIG_FONTS is not set
 # CONFIG_FPE_NWFPE is not set
-# CONFIG_FREEZER is not set
 # CONFIG_FSCACHE is not set
 # CONFIG_FTL is not set
 # CONFIG_FTRACE is not set
@@ -187,7 +186,6 @@ CONFIG_FB_CFB_IMAGEBLIT=y
 # CONFIG_HID_ZYDACRON is not set
 CONFIG_HIGHMEM=y
 # CONFIG_HIGH_RES_TIMERS is not set
-# CONFIG_HOTPLUG_CPU is not set
 # CONFIG_HPFS_FS is not set
 # CONFIG_HWMON is not set
 # CONFIG_HW_RANDOM is not set
@@ -376,7 +374,6 @@ CONFIG_OABI_COMPAT=y
 # CONFIG_PHONE is not set
 # CONFIG_PHONET is not set
 # CONFIG_PID_NS is not set
-# CONFIG_PM is not set
 # CONFIG_POWER_SUPPLY is not set
 # CONFIG_PPS is not set
 CONFIG_PREEMPT_NONE=y
@@ -508,6 +505,7 @@ CONFIG_USB_ISP1760_HCD=y
 # CONFIG_USB_MDC800 is not set
 # CONFIG_USB_MICROTEK is not set
 CONFIG_USB_MON=y
+# CONFIG_USB_OTG is not set
 # CONFIG_USB_OXU210HP_HCD is not set
 # CONFIG_USB_PEGASUS is not set
 # CONFIG_USB_PRINTER is not set
