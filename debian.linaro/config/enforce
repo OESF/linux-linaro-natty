@@ -78,3 +78,7 @@ value CONFIG_PRINTK_TIME y
 
 # CONFIG_PM is broken on s5pv310 so don't enforce CONFIG_PM_DEBUG for the moment
 value CONFIG_ARCH_S5PV310 y | value CONFIG_PM_DEBUG y
+
+# LINARO kernels should be able to boot with a BTRFS rootfs without an initrd
+value CONFIG_BTRFS_FS y
+value CONFIG_LIBCRC32C y

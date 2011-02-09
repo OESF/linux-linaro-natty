@@ -25,6 +25,8 @@ linux-linaro (2.6.37-1003.6) UNRELEASED; urgency=low
   * Enforce CONFIG_PM_DEBUG for all flavours
     - LP: #713075
   * Add s5pv310 flavour
+  * enable and enforce CONFIG_BTRFS_FS for all flavours
+    - LP: #715835
 
  -- John Rigby <john.rigby@linaro.org>  Tue, 08 Feb 2011 19:56:22 -0700
 
