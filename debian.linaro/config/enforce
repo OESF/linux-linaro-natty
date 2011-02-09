@@ -73,3 +73,5 @@ value CONFIG_IMA n
 # Ensure CONFIG_IPV6 is y, if this is a module we get a module load for
 # every ipv6 packet, bad.
 value CONFIG_IPV6 y
+
+value CONFIG_PRINTK_TIME y
