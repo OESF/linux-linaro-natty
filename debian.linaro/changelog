@@ -6,7 +6,7 @@ linux-linaro (2.6.37-1003.6) UNRELEASED; urgency=low
 
   [ John Rigby ]
 
-  * rebase to new upstreams:
+  * Rebase to new upstreams:
     linaro-linux-2.6.37-upstream-24Jan2011
     Ubuntu-2.6.37-12.26
        Skipping because of conflicting upstream patches:
@@ -14,16 +14,17 @@ linux-linaro (2.6.37-1003.6) UNRELEASED; urgency=low
          Revert "ARM: stack protector: change the canary value per task"
          UBUNTU: SAUCE: ARM: OMAP: Beagle: support twl gpio differences on xM
   * Add U8500 flavour
-  * rebase to linaro-linux-2.6.37-upstream-27Jan2011
+  * Rebase to linaro-linux-2.6.37-upstream-27Jan2011
   * Fix Ubuntu upstream version number typo
-  * rebase to linaro-linux-2.6.37-upstream-31Jan2011
-  * rebase to linaro-linux-2.6.37-upstream-08Feb2011
-  * enforce CONFIG_PRINTK_TIME for all flavours
+  * Rebase to linaro-linux-2.6.37-upstream-31Jan2011
+  * Rebase to linaro-linux-2.6.37-upstream-08Feb2011
+  * Enforce CONFIG_PRINTK_TIME for all flavours
     - LP: #715576
-  * fix package control file to indicate that OMAP4 is supported
+  * Fix package control file to indicate that OMAP4 is supported
     - LP: #714590
-  * enforce CONFIG_PM_DEBUG for all flavours
+  * Enforce CONFIG_PM_DEBUG for all flavours
     - LP: #713075
+  * Add s5pv310 flavour
 
  -- John Rigby <john.rigby@linaro.org>  Tue, 08 Feb 2011 19:56:22 -0700
 
