@@ -155,6 +155,7 @@ CONFIG_FB_CFB_IMAGEBLIT=y
 # CONFIG_FIXED_PHY is not set
 # CONFIG_FONTS is not set
 # CONFIG_FPE_NWFPE is not set
+CONFIG_FREEZER=y
 # CONFIG_FSCACHE is not set
 # CONFIG_FTL is not set
 # CONFIG_FTRACE is not set
@@ -378,6 +379,7 @@ CONFIG_OABI_COMPAT=y
 # CONFIG_PHONE is not set
 # CONFIG_PHONET is not set
 # CONFIG_PID_NS is not set
+CONFIG_PM=y
 # CONFIG_POWER_SUPPLY is not set
 # CONFIG_PPS is not set
 CONFIG_PREEMPT_NONE=y

@@ -158,6 +158,7 @@ CONFIG_FB_CFB_IMAGEBLIT=m
 # CONFIG_FB_SM7XX is not set
 CONFIG_FIXED_PHY=y
 # CONFIG_FONTS is not set
+CONFIG_FREEZER=y
 # CONFIG_FSCACHE is not set
 # CONFIG_FTL is not set
 # CONFIG_FTRACE is not set
@@ -380,6 +381,7 @@ CONFIG_NR_CPUS=2
 # CONFIG_PHONE is not set
 # CONFIG_PHONET is not set
 # CONFIG_PID_NS is not set
+CONFIG_PM=y
 # CONFIG_POHMELFS is not set
 # CONFIG_POWER_SUPPLY is not set
 # CONFIG_PPS is not set
