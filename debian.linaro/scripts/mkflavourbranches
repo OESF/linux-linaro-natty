@@ -64,10 +64,24 @@ function do_flavour_branches {
         done
 
         git status
+        fakeroot ./debian/rules clean
+        fakeroot ./debian/rules updateconfigs
+	cat >> debian.linaro/config/armel/config.flavour.${common_flavour_prefix}-$flavour << END
+#
+# Single flavour kernel packages have no flavour dependent config options
+# look in ../config.common.ubuntu for full config
+#
+END
+	cat >> debian.linaro/config/armel/config.common.armel << END
+#
+# Single flavour kernel packages have no arch dependent config options
+# look in ../config.common.ubuntu for full config
+#
+END
+        git commit -s -m "LINARO: Cleanup configs after removing other flavours" debian.linaro/config
         git commit -s -m "LINARO: Linaro-${source_pkg_version} $flavour only"
         tagname="Linaro-${source_pkg_version}-${flavour}-only"
         git tag -f -s -m "$tagname" $tagname HEAD
-
 
         git push $remote_push -f HEAD:$flavour-only
         git push $remote_push -f $tagname
@@ -79,9 +93,12 @@ function do_flavour_branches {
     done
 }
 
-test $# -eq 2 || fail "must provide working branch name and a pushable remote"
-working_branch=$1
-remote_push=$2
+test $# -eq 1 || fail "must provide a pushable remote"
+
+working_branch="tbranch$(dd 2>/dev/null if=/dev/urandom bs=10 count=1 | od -X | awk '{ print $2 }')"
+echo Using $working_branch as working branch name
+
+remote_push=$1
 
 
 orig_branch=$(git symbolic-ref HEAD 2>/dev/null)
@@ -99,6 +116,7 @@ git push $remote_push -f $tagname
 do_flavour_branches
 
 git checkout $orig_branch
+git branch -D $working_branch
 
 
 cleanup
