@@ -4,7 +4,12 @@ linux-linaro (2.6.38-1000.1) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
- -- John Rigby <john.rigby@linaro.org>  Tue, 22 Feb 2011 09:52:15 -0700
+  * Rebase to new upstreams: 
+    Linux v2.6.38-rc5
+    linaro-linux-2.6.38-upstream-22Feb2011
+    Ubuntu-2.6.38-4.31
+
+ -- John Rigby <john.rigby@linaro.org>  Tue, 22 Feb 2011 12:48:52 -0700
 
 linux-linaro (2.6.37-1003.6) natty; urgency=low
 
