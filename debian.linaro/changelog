@@ -11,6 +11,10 @@ linux-linaro (2.6.38-1000.1) UNRELEASED; urgency=low
   * Enforce CONFIG_PM_ADVANCED_DEBUG for all flavours
     - LP: #713075
   * Temporarily disable display on OMAP4
+  * Rebase to new upstreams: 
+    Linux v2.6.38-rc6
+    linaro-linux-2.6.38-upstream-23Feb2011
+    Ubuntu-2.6.38-5.32
 
  -- John Rigby <john.rigby@linaro.org>  Tue, 22 Feb 2011 12:48:52 -0700
 
