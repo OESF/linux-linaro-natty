@@ -15,6 +15,7 @@ linux-linaro (2.6.38-1000.1) UNRELEASED; urgency=low
     Linux v2.6.38-rc6
     linaro-linux-2.6.38-upstream-23Feb2011
     Ubuntu-2.6.38-5.32
+  * OMAP4: enable smc instructions in  arch/arm/mach-omap2/sleep34xx.S
 
  -- John Rigby <john.rigby@linaro.org>  Tue, 22 Feb 2011 12:48:52 -0700
 
