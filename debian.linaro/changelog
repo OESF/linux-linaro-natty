@@ -10,6 +10,7 @@ linux-linaro (2.6.38-1000.1) UNRELEASED; urgency=low
     Ubuntu-2.6.38-4.31
   * Enforce CONFIG_PM_ADVANCED_DEBUG for all flavours
     - LP: #713075
+  * Temporarily disable display on OMAP4
 
  -- John Rigby <john.rigby@linaro.org>  Tue, 22 Feb 2011 12:48:52 -0700
 
