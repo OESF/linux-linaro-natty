@@ -8,6 +8,7 @@ linux-linaro (2.6.38-1000.2) UNRELEASED; urgency=low
     Linux v2.6.38-rc6 -- same
     linaro-linux-2.6.38-upstream-1Mar2011 -- new
     Ubuntu-2.6.38-5.32 -- same
+  * Enable CONFIG_THUMB2_KERNEL for OMAP[34]
 
  -- John Rigby <john.rigby@linaro.org>  Tue, 01 Mar 2011 14:11:33 -0700
 
