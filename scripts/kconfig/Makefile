@@ -11,6 +11,12 @@ else
 Kconfig := Kconfig
 endif
 
+ifdef KBUILD_SCRIPTROOT
+CONF = $(KBUILD_SCRIPTROOT)/scripts/kconfig/conf
+else
+CONF = $(obj)/conf
+endif
+
 xconfig: $(obj)/qconf
 	$< $(Kconfig)
 
@@ -20,16 +26,16 @@ gconfig: $(obj)/gconf
 menuconfig: $(obj)/mconf
 	$< $(Kconfig)
 
-config: $(obj)/conf
+config: $(CONF)
 	$< --oldaskconfig $(Kconfig)
 
 nconfig: $(obj)/nconf
 	$< $(Kconfig)
 
-oldconfig: $(obj)/conf
+oldconfig: $(CONF)
 	$< --$@ $(Kconfig)
 
-silentoldconfig: $(obj)/conf
+silentoldconfig: $(CONF)
 	$(Q)mkdir -p include/generated
 	$< --$@ $(Kconfig)
 
@@ -41,22 +47,22 @@ ifeq ($(findstring /,$(LSMOD)),)
 endif
 endif
 
-localmodconfig: $(obj)/streamline_config.pl $(obj)/conf
+localmodconfig: $(obj)/streamline_config.pl $(CONF)
 	$(Q)mkdir -p include/generated
 	$(Q)perl $< $(srctree) $(Kconfig) $(LSMOD_F) > .tmp.config
 	$(Q)if [ -f .config ]; then 					\
 			cmp -s .tmp.config .config ||			\
 			(mv -f .config .config.old.1;			\
 			 mv -f .tmp.config .config;			\
-			 $(obj)/conf --silentoldconfig $(Kconfig);	\
+			 $(CONF) --silentoldconfig $(Kconfig);	\
 			 mv -f .config.old.1 .config.old)		\
 	else								\
 			mv -f .tmp.config .config;			\
-			$(obj)/conf --silentoldconfig $(Kconfig);	\
+			$(CONF) --silentoldconfig $(Kconfig);	\
 	fi
 	$(Q)rm -f .tmp.config
 
-localyesconfig: $(obj)/streamline_config.pl $(obj)/conf
+localyesconfig: $(obj)/streamline_config.pl $(CONF)
 	$(Q)mkdir -p include/generated
 	$(Q)perl $< $(srctree) $(Kconfig) $(LSMOD_F) > .tmp.config
 	$(Q)sed -i s/=m/=y/ .tmp.config
@@ -64,11 +70,11 @@ localyesconfig: $(obj)/streamline_config.pl $(obj)/conf
 			cmp -s .tmp.config .config ||			\
 			(mv -f .config .config.old.1;			\
 			 mv -f .tmp.config .config;			\
-			 $(obj)/conf --silentoldconfig $(Kconfig);	\
+			 $(CONF) --silentoldconfig $(Kconfig);	\
 			 mv -f .config.old.1 .config.old)		\
 	else								\
 			mv -f .tmp.config .config;			\
-			$(obj)/conf --silentoldconfig $(Kconfig);	\
+			$(CONF) --silentoldconfig $(Kconfig);	\
 	fi
 	$(Q)rm -f .tmp.config
 
@@ -97,18 +103,18 @@ update-po-config: $(obj)/kxgettext $(obj)/gconf.glade.h
 
 PHONY += allnoconfig allyesconfig allmodconfig alldefconfig randconfig
 
-allnoconfig allyesconfig allmodconfig alldefconfig randconfig: $(obj)/conf
+allnoconfig allyesconfig allmodconfig alldefconfig randconfig: $(CONF)
 	$< --$@ $(Kconfig)
 
 PHONY += listnewconfig oldnoconfig savedefconfig defconfig
 
-listnewconfig oldnoconfig: $(obj)/conf
+listnewconfig oldnoconfig: $(CONF)
 	$< --$@ $(Kconfig)
 
-savedefconfig: $(obj)/conf
+savedefconfig: $(CONF)
 	$< --$@=defconfig $(Kconfig)
 
-defconfig: $(obj)/conf
+defconfig: $(CONF)
 ifeq ($(KBUILD_DEFCONFIG),)
 	$< --defconfig $(Kconfig)
 else
@@ -116,7 +122,7 @@ else
 	$(Q)$< --defconfig=arch/$(SRCARCH)/configs/$(KBUILD_DEFCONFIG) $(Kconfig)
 endif
 
-%_defconfig: $(obj)/conf
+%_defconfig: $(CONF)
 	$(Q)$< --defconfig=arch/$(SRCARCH)/configs/$@ $(Kconfig)
 
 # Help text used by make help
