@@ -10,6 +10,8 @@ build_cd =
 build_O  = O=$(builddir)/build-$*
 endif
 
+kbsr      = $(builddir)/build-$*
+
 prepare-%: $(stampdir)/stamp-prepare-%
 	@# Empty for make to be happy
 $(stampdir)/stamp-prepare-%: $(stampdir)/stamp-prepare-tree-% prepare-checks-%
@@ -161,7 +163,7 @@ endif
 		sed -e 's/.*CONFIG_DEBUG_INFO=.*/# CONFIG_DEBUG_INFO is not set/g' > \
 		$(hdrdir)/.config
 	chmod 644 $(hdrdir)/.config
-	$(kmake) O=$(hdrdir) silentoldconfig prepare scripts
+	$(kmake) HOSTCC=$(CROSS_COMPILE)gcc KBUILD_SCRIPTROOT=$(kbsr) O=$(hdrdir) silentoldconfig prepare scripts
 	# We'll symlink this stuff
 	rm -f $(hdrdir)/Makefile
 	rm -rf $(hdrdir)/include2
