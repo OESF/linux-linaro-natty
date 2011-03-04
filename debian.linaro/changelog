@@ -10,6 +10,10 @@ linux-linaro (2.6.38-1001.2) UNRELEASED; urgency=low
     Ubuntu-2.6.38-5.32 -- same
   * Enable CONFIG_THUMB2_KERNEL for OMAP[34]
   * Bump ABI
+  * Rebase to new upstreams: 
+    Linux v2.6.38-rc7
+    linaro-linux-2.6.38-upstream-4Mar2011
+    ubuntu-natty master-next as of 4Mar2011 
 
  -- John Rigby <john.rigby@linaro.org>  Tue, 01 Mar 2011 14:11:33 -0700
 
