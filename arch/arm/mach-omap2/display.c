@@ -65,14 +65,6 @@ int __init omap_display_init(struct omap_dss_board_info *board_data)
 	struct omap_display_platform_data pdata;
 
 	/*
-	 * NB: This is temporary to have a headless panda until
-	 * omap4 display works
-	 */
-	if (cpu_is_omap44xx()) {
-		printk(KERN_WARNING "Disabling OMAP display on OMAP4!!!!\n");
-		return -ENODEV;
-	}
-	/*
 	 * omap: valid DSS hwmod names
 	 * omap2,3,4: dss_core, dss_dispc, dss_rfbi, dss_venc
 	 * omap3,4: dss_dsi1
