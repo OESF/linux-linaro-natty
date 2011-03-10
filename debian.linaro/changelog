@@ -18,8 +18,14 @@ linux-linaro (2.6.38-1001.2) UNRELEASED; urgency=low
   * Disable CONFIG_OMAP2_DSS_SDI
     - LP: #728603
     - LP: #720055
+  * Rebase to new upstreams:
+    Linux v2.6.38-rc8
+    linaro-linux-2.6.38-upstream-9Mar2011
+      rebased to 2.6.38-rc8
+      with lttng/linaro merged
+    - LP: #724377
 
- -- John Rigby <john.rigby@linaro.org>  Tue, 01 Mar 2011 14:11:33 -0700
+ -- John Rigby <john.rigby@linaro.org>  Wed, 09 Mar 2011 20:52:26 -0700
 
 linux-linaro (2.6.38-1000.1) natty; urgency=low
 
