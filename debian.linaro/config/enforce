@@ -83,3 +83,6 @@ value CONFIG_ARCH_S5PV310 y | value CONFIG_PM_ADVANCED_DEBUG y
 # LINARO kernels should be able to boot with a BTRFS rootfs without an initrd
 value CONFIG_BTRFS_FS y
 value CONFIG_LIBCRC32C y
+
+# LINARO kernels should have TIMER_STATS on (LP: 718677)
+value CONFIG_TIMER_STATS y
