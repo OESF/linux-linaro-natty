@@ -25,8 +25,14 @@ linux-linaro (2.6.38-1001.2) UNRELEASED; urgency=low
   * Remove generated file kernel-versions and sort kerne-versions.in
   * Enable CONFIG_TIMER_STATS
     - LP: #718677
+  * Rebase to new upstreams: 
+    Linux v2.6.38 final
+    linaro-linux-2.6.38-upstream-16Mar2011
+    - LP: #708883
+    - LP: #723159
+    ubuntu-natty Ubuntu-2.6.38-7.35
 
- -- John Rigby <john.rigby@linaro.org>  Thu, 10 Mar 2011 14:41:46 -0700
+ -- John Rigby <john.rigby@linaro.org>  Wed, 16 Mar 2011 16:11:06 -0600
 
 linux-linaro (2.6.38-1000.1) natty; urgency=low
 
