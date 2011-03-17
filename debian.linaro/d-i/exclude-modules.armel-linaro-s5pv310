@@ -1,3 +1,4 @@
-squashfs-modules
 fs-secondary-modules
+nfs-modules
+squashfs-modules
 vlan-modules
