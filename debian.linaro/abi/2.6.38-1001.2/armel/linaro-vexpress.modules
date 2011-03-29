@@ -114,7 +114,6 @@ linear
 litelink-sir
 llc
 llc2
-lockd
 lp
 ma600-sir
 mac80211
@@ -128,7 +127,6 @@ msdos
 multipath
 nbd
 net1080
-nfs
 nls_iso8859-1
 old_belkin-sir
 p54common
@@ -181,7 +179,6 @@ squashfs
 ssb
 stir4200
 stp
-sunrpc
 syscopyarea
 sysfillrect
 sysimgblt

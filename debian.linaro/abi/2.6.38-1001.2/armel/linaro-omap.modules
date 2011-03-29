@@ -120,7 +120,6 @@ atxp1
 au0828
 au8522
 aufs
-auth_rpcgss
 authenc
 autofs
 autofs4
@@ -255,7 +254,6 @@ dccp_ipv4
 dccp_ipv6
 decnet
 deflate
-des_generic
 dib0070
 dib0090
 dib3000mb
@@ -771,7 +769,6 @@ lm93
 lm95241
 lms283gf05
 lnbp21
-lockd
 lp
 lp3971
 lpddr_cmds
@@ -915,8 +912,6 @@ nf_tproxy_core
 nfnetlink
 nfnetlink_log
 nfnetlink_queue
-nfs
-nfs_acl
 nfsd
 nftl
 nilfs2
@@ -1004,7 +999,6 @@ p54usb
 p8022
 p8023
 panel
-panel-acx565akm
 parkbd
 parport
 parport_ax88796
@@ -1189,7 +1183,6 @@ rndis_wlan
 romfs
 rose
 rotary_encoder
-rpcsec_gss_krb5
 rt2500usb
 rt2800lib
 rt2800usb
@@ -1287,7 +1280,6 @@ scsi_transport_sas
 scsi_transport_srp
 scsi_wait_scan
 sctp
-sctp_probe
 sdhci-platform
 sdio_uart
 se401
@@ -1450,7 +1442,6 @@ stv090x
 stv6110
 stv6110x
 sunkbd
-sunrpc
 symbolserial
 synaptics_i2c
 syscopyarea
