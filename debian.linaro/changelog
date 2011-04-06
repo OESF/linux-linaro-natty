@@ -17,6 +17,7 @@ linux-linaro (2.6.38-1002.3) UNRELEASED; urgency=low
     Linux v2.6.38.2
     linaro-linux-2.6.38-upstream-5Apr2011
     Ubuntu-2.6.38-8.41
+  * Update configs for device tree, dvfs and lttng
 
  -- John Rigby <john.rigby@linaro.org>  Tue, 05 Apr 2011 20:45:07 -0600
 
