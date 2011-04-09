@@ -36,6 +36,7 @@ $(stampdir)/stamp-build-%: prepare-%
 	@echo "Building $*..."
 	$(build_cd) $(kmake) $(build_O) $(conc_level) $(build_image)
 	$(build_cd) $(kmake) $(build_O) $(conc_level) modules
+	$(build_cd) $(kmake) $(build_O) $(conc_level) dtbs
 	@touch $@
 
 # Install the finished build
@@ -71,6 +72,11 @@ endif
 		$(pkgdir)/boot/abi-$(abi_release)-$*
 	install -m600 $(builddir)/build-$*/System.map \
 		$(pkgdir)/boot/System.map-$(abi_release)-$*
+
+	mkdir -p $(pkgdir)/boot/dt-$(abi_release)-$*/
+	install -m600 -D $(builddir)/build-$*/arch/$(build_arch)/boot/*.dtb \
+		$(pkgdir)/boot/dt-$(abi_release)-$*/
+
 ifeq ($(no_dumpfile),)
 	makedumpfile -g $(pkgdir)/boot/vmcoreinfo-$(abi_release)-$* \
 		-x $(builddir)/build-$*/vmlinux
