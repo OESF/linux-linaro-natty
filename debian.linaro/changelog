@@ -18,8 +18,11 @@ linux-linaro (2.6.38-1002.3) UNRELEASED; urgency=low
     linaro-linux-2.6.38-upstream-5Apr2011
     Ubuntu-2.6.38-8.41
   * Update configs for device tree, dvfs and lttng
+  * LINARO: add building of dtb's
+  * LINARO: SAUCE: disable CONFIG_OMAP_RESET_CLOCKS
+  * ARM: EXYNOS4: CPUIDLE Support
 
- -- John Rigby <john.rigby@linaro.org>  Tue, 05 Apr 2011 20:45:07 -0600
+ -- John Rigby <john.rigby@linaro.org>  Mon, 11 Apr 2011 10:58:44 -0600
 
 linux-linaro (2.6.38-1001.2) natty; urgency=low
 
