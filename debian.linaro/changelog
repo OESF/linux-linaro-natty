@@ -4,6 +4,19 @@ linux-linaro (2.6.38-1002.3) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+
+  [ Upstream Fixes ]
+
+  * MUSB: shutdown: Make sure block is awake before doing shutdown
+    - LP: #745737
+  * Fixed gpio polarity of gpio USB-phy reset.
+    - LP: #747639
+
+  [ Andy Green ]
+
+  * LINARO: SAUCE: disable CONFIG_OMAP_RESET_CLOCKS
+    - LP: #752900
+
   [ John Rigby ]
 
   * Rebase to new upstreams:
@@ -17,12 +30,13 @@ linux-linaro (2.6.38-1002.3) UNRELEASED; urgency=low
     Linux v2.6.38.2
     linaro-linux-2.6.38-upstream-5Apr2011
     Ubuntu-2.6.38-8.41
+    - LP: #732842
   * Update configs for device tree, dvfs and lttng
   * LINARO: add building of dtb's
-  * LINARO: SAUCE: disable CONFIG_OMAP_RESET_CLOCKS
-  * ARM: EXYNOS4: CPUIDLE Support
+  * LINARO: SAUCE: Disable lowest operating freqs on omap34xx
+    - LP: #732912
 
- -- John Rigby <john.rigby@linaro.org>  Mon, 11 Apr 2011 10:58:44 -0600
+ -- John Rigby <john.rigby@linaro.org>  Thu, 14 Apr 2011 12:16:06 -0600
 
 linux-linaro (2.6.38-1001.2) natty; urgency=low
 
