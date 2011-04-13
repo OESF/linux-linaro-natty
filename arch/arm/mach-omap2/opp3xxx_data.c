@@ -105,11 +105,18 @@ struct omap_volt_data omap36xx_vddcore_volt_data[] = {
 /* OPP data */
 
 static struct omap_opp_def __initdata omap34xx_opp_def_list[] = {
+/*
+ * Workaround GFX_FIFO_UNDERFLOW errors that happen
+ * when low frequency states are entered with OMAP2_DSS
+ * enabled.
+ */
+#ifndef CONFIG_OMAP2_DSS
 	/* MPU OPP1 */
 	OPP_INITIALIZER("mpu", true, 125000000, OMAP3430_VDD_MPU_OPP1_UV),
 	/* MPU OPP2 */
 	OPP_INITIALIZER("mpu", true, 250000000, OMAP3430_VDD_MPU_OPP2_UV),
 	/* MPU OPP3 */
+#endif
 	OPP_INITIALIZER("mpu", true, 500000000, OMAP3430_VDD_MPU_OPP3_UV),
 	/* MPU OPP4 */
 	OPP_INITIALIZER("mpu", true, 550000000, OMAP3430_VDD_MPU_OPP4_UV),
