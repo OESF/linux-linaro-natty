@@ -192,7 +192,6 @@ CONFIG_HZ=100
 # CONFIG_I2C is not set
 # CONFIG_ICPLUS_PHY is not set
 # CONFIG_IEEE802154 is not set
-CONFIG_IKCONFIG=y
 # CONFIG_INET_AH is not set
 # CONFIG_INET_ESP is not set
 # CONFIG_INET_IPCOMP is not set
