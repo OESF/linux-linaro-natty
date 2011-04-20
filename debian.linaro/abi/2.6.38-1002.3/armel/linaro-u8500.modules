@@ -166,6 +166,7 @@ nbd
 net1080
 nls_iso8859-1
 nls_iso8859-15
+of_mmc_spi
 ohci-hcd
 old_belkin-sir
 p8022
