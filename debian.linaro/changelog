@@ -4,6 +4,20 @@ linux-linaro (2.6.38-1003.4) UNRELEASED; urgency=low
   CHANGELOG: Use the printchanges target to see the curent changes.
   CHANGELOG: Use the insertchanges target to create the final log.
 
+  [ Avik Sil ]
+    arm: pmu: support pmu/perf on OMAP4
+    - LP: #702999
+
+  [ John Rigby ]
+
+  * Rebase to new upstreams:
+    Linux v2.6.38.3
+    linaro-linux-2.6.38-upstream-20Apr2011
+    Ubuntu-2.6.38-8.42
+    And temporarily:
+      testbranch from liaro-linux-2.6.38 until it is merge upstream
+    - LP: #725252
+
  -- John Rigby <john.rigby@linaro.org>  Wed, 20 Apr 2011 08:15:29 -0600
 
 linux-linaro (2.6.38-1002.3) natty; urgency=low
