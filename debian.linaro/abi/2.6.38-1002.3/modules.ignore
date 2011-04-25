@@ -1,0 +1,5 @@
+fb_sys_fops
+i2c-algo-bit
+syscopyarea
+sysfillrect
+sysimgblt
