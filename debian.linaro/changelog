@@ -15,10 +15,11 @@ linux-linaro (2.6.38-1003.4) UNRELEASED; urgency=low
     linaro-linux-2.6.38-upstream-20Apr2011
     Ubuntu-2.6.38-8.42
     And temporarily:
-      testbranch from liaro-linux-2.6.38 until it is merge upstream
+      testbranch from linaro-linux-2.6.38 until it is merge upstream
     - LP: #725252
+  * Rebase to linaro-linux-2.6.38-upstream-26Apr2011
 
- -- John Rigby <john.rigby@linaro.org>  Wed, 20 Apr 2011 08:15:29 -0600
+ -- John Rigby <john.rigby@linaro.org>  Tue, 26 Apr 2011 21:32:16 -0600
 
 linux-linaro (2.6.38-1002.3) natty; urgency=low
 
