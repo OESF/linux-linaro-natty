@@ -16,10 +16,20 @@ linux-linaro (2.6.38-1003.4) UNRELEASED; urgency=low
     Ubuntu-2.6.38-8.42
     And temporarily:
       testbranch from linaro-linux-2.6.38 until it is merge upstream
+      and enable CONFIG_DRM for omap
     - LP: #725252
+    Enable profiling related CONFIG options:
+      CONFIG_PROFILING=y
+      CONFIG_PERF_EVENTS=y
+      CONFIG_HW_PERF_EVENTS=y
+      CONFIG_FTRACE=y
+      CONFIG_ENABLE_DEFAULT_TRACERS=y
+      CONFIG_HIGH_RES_TIMERS=y
   * Rebase to linaro-linux-2.6.38-upstream-26Apr2011
+  * Rebase to linaro-linux-2.6.38 as of 3May2011
+      master and testing merged. 
 
- -- John Rigby <john.rigby@linaro.org>  Tue, 26 Apr 2011 21:32:16 -0600
+ -- John Rigby <john.rigby@linaro.org>  Tue, 03 May 2011 18:58:43 -0600
 
 linux-linaro (2.6.38-1002.3) natty; urgency=low
 
