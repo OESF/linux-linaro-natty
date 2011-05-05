@@ -409,6 +409,9 @@ const struct clkops clkops_omap3_core_dpll_ops = {
 	.deny_idle	= omap3_dpll_deny_idle,
 };
 
+unsigned long long cpu_hz;
+EXPORT_SYMBOL(cpu_hz);
+
 #endif
 
 /*
