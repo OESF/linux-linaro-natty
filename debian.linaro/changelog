@@ -5,8 +5,25 @@ linux-linaro (2.6.38-1003.4) UNRELEASED; urgency=low
   CHANGELOG: Use the insertchanges target to create the final log.
 
   [ Avik Sil ]
+
     arm: pmu: support pmu/perf on OMAP4
     - LP: #702999
+
+  [ Ian Multon ]
+    OMAP: Fix non-combined OMAP3+OMAP4 builds
+
+  [ Ricardo Salveti ]
+
+    Multiple OMAP4 HDMI fixes:
+      ARM: OMAP4: Remove extra instance of omap_dss_device
+      OMAP: DSS2: HDMI: Adding get_edid callback support
+      OMAP: DSS2: HDMI: Adding is_detected callback support
+      OMAP: DSS: HDMI: tame hdmi driver
+      DRM: OMAP: Add HDMI support
+      OMAP: DSS2: adding force argument to is_detected()
+      OMAP4: DSS2: HDMI: adding a workaround for LG monitors
+      OMAP: DSS2: Avoid enabling panel if none is around
+      OMAP: I2C: "controller timed out" message should use dev_warn
 
   [ John Rigby ]
 
@@ -28,8 +45,17 @@ linux-linaro (2.6.38-1003.4) UNRELEASED; urgency=low
   * Rebase to linaro-linux-2.6.38-upstream-26Apr2011
   * Rebase to linaro-linux-2.6.38 as of 3May2011
       master and testing merged. 
+  * Enable MUSB related CONFIG options for OMAP:
+      CONFIG_USB_MUSB_HDRC=y
+      CONFIG_USB_MUSB_OMAP2PLUS=y
+      CONFIG_USB_MUSB_OTG=y
+      CONFIG_USB_GADGET_MUSB_HDRC=y
+      CONFIG_USB_MUSB_HDRC_HCD=y
+      CONFIG_USB_INVENTRA_DMA=y
+      CONFIG_USB_MUSB_DEBUG=y
+    - LP: #730698
 
- -- John Rigby <john.rigby@linaro.org>  Tue, 03 May 2011 18:58:43 -0600
+ -- John Rigby <john.rigby@linaro.org>  Thu, 05 May 2011 10:46:49 -0600
 
 linux-linaro (2.6.38-1002.3) natty; urgency=low
 
