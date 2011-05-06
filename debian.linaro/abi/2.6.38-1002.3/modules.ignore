@@ -3,3 +3,5 @@ i2c-algo-bit
 syscopyarea
 sysfillrect
 sysimgblt
+twl4030-usb
+twl6030-usb
