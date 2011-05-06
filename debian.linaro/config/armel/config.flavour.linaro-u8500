@@ -610,6 +610,7 @@ CONFIG_VT_HW_CONSOLE_BINDING=y
 # CONFIG_WATCHDOG is not set
 # CONFIG_WIMAX is not set
 # CONFIG_WIRELESS is not set
+# CONFIG_WL12XX_MENU is not set
 # CONFIG_WLAN is not set
 # CONFIG_X25 is not set
 # CONFIG_XFRM_USER is not set
