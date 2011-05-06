@@ -14,7 +14,7 @@ linux-linaro (2.6.38-1003.4) UNRELEASED; urgency=low
 
   [ Ricardo Salveti ]
 
-    Multiple OMAP4 HDMI fixes:
+    OMAP4 DRM support:
       ARM: OMAP4: Remove extra instance of omap_dss_device
       OMAP: DSS2: HDMI: Adding get_edid callback support
       OMAP: DSS2: HDMI: Adding is_detected callback support
@@ -24,6 +24,12 @@ linux-linaro (2.6.38-1003.4) UNRELEASED; urgency=low
       OMAP4: DSS2: HDMI: adding a workaround for LG monitors
       OMAP: DSS2: Avoid enabling panel if none is around
       OMAP: I2C: "controller timed out" message should use dev_warn
+      OMAP: devices: register first the drm omap device, and then the SGX one
+      OMAP4: DSS: HDMI: increasing msleep value for the detect workaround
+      OMAP: DRM: Using same numbers of CRTCS and PIPES for OMAP 3 and 4
+      DRM: OMAP: Fixing PVR kernel module name
+      OMAP2: DSS: HDMI: removing error msg from check_timing
+      LINARO: CONFIG: enable CONFIG_PREEMPT for OMAP as needed for SGX
 
   [ John Rigby ]
 
@@ -55,7 +61,7 @@ linux-linaro (2.6.38-1003.4) UNRELEASED; urgency=low
       CONFIG_USB_MUSB_DEBUG=y
     - LP: #730698
 
- -- John Rigby <john.rigby@linaro.org>  Thu, 05 May 2011 10:46:49 -0600
+ -- John Rigby <john.rigby@linaro.org>  Fri, 06 May 2011 07:37:58 -0600
 
 linux-linaro (2.6.38-1002.3) natty; urgency=low
 
