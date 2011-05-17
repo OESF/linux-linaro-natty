@@ -30,6 +30,9 @@ linux-linaro (2.6.38-1003.4) UNRELEASED; urgency=low
       DRM: OMAP: Fixing PVR kernel module name
       OMAP2: DSS: HDMI: removing error msg from check_timing
       LINARO: CONFIG: enable CONFIG_PREEMPT for OMAP as needed for SGX
+    LINARO: CONFIG: Enabling WL12XX
+    LINARO: CONFIG: Changing CONFIG_LEDS_TRIGGER_HEARTBEAT from module to built-in
+    DRM: OMAP: replace request_module with request_module_nowait
 
   [ John Rigby ]
 
@@ -61,7 +64,7 @@ linux-linaro (2.6.38-1003.4) UNRELEASED; urgency=low
       CONFIG_USB_MUSB_DEBUG=y
     - LP: #730698
 
- -- John Rigby <john.rigby@linaro.org>  Fri, 06 May 2011 07:37:58 -0600
+ -- John Rigby <john.rigby@linaro.org>  Mon, 16 May 2011 23:34:18 -0600
 
 linux-linaro (2.6.38-1002.3) natty; urgency=low
 
