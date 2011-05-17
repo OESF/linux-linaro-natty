@@ -5,3 +5,4 @@ sysfillrect
 sysimgblt
 twl4030-usb
 twl6030-usb
+ledtrig-heartbeat
