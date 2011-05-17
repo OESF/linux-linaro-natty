@@ -60,6 +60,7 @@ CONFIG_CMDLINE="root=/dev/ram0 console=ttyAMA2,115200n8"
 # CONFIG_CODA_FS is not set
 CONFIG_CONFIGFS_FS=m
 CONFIG_CONNECTOR=y
+CONFIG_CPU_FREQ=y
 # CONFIG_CPU_IDLE is not set
 # CONFIG_CRAMFS is not set
 CONFIG_CRC_T10DIF=y
@@ -611,7 +612,6 @@ CONFIG_VT_HW_CONSOLE_BINDING=y
 # CONFIG_WATCHDOG is not set
 # CONFIG_WIMAX is not set
 # CONFIG_WIRELESS is not set
-# CONFIG_WL12XX_MENU is not set
 # CONFIG_WLAN is not set
 # CONFIG_X25 is not set
 # CONFIG_XFRM_USER is not set

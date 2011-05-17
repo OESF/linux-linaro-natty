@@ -63,8 +63,9 @@ linux-linaro (2.6.38-1003.4) UNRELEASED; urgency=low
       CONFIG_USB_INVENTRA_DMA=y
       CONFIG_USB_MUSB_DEBUG=y
     - LP: #730698
+  * Disable CPU_FREQ for omap because of stability issues 
 
- -- John Rigby <john.rigby@linaro.org>  Mon, 16 May 2011 23:34:18 -0600
+ -- John Rigby <john.rigby@linaro.org>  Tue, 17 May 2011 09:00:46 -0600
 
 linux-linaro (2.6.38-1002.3) natty; urgency=low
 
