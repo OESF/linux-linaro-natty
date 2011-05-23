@@ -6,3 +6,6 @@ sysimgblt
 twl4030-usb
 twl6030-usb
 ledtrig-heartbeat
+mmc_spi
+of_mmc_spi
+
