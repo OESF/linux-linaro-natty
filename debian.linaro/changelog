@@ -67,8 +67,10 @@ linux-linaro (2.6.38-1003.4) UNRELEASED; urgency=low
   * Rebase to linaro-linux-2.6.38-upstream-17May2011 
       Has all the OMAP4 display fixes from rsalveti so those
       have been removed from Linaro patch series.
+  * Rebase to linux-linux-2.6.38-upstream-23May2011
+      Which is includes upstream stable release v2.6.38.7
 
- -- John Rigby <john.rigby@linaro.org>  Tue, 17 May 2011 16:42:32 -0600
+ -- John Rigby <john.rigby@linaro.org>  Mon, 23 May 2011 10:35:42 -0600
 
 linux-linaro (2.6.38-1002.3) natty; urgency=low
 
