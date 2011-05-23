@@ -69,6 +69,9 @@ linux-linaro (2.6.38-1003.4) UNRELEASED; urgency=low
       have been removed from Linaro patch series.
   * Rebase to linux-linux-2.6.38-upstream-23May2011
       Which is includes upstream stable release v2.6.38.7
+  * Enable HIGHMEM for OMAP
+  * Disable WL12XX
+      Breaks all networking in current state
 
  -- John Rigby <john.rigby@linaro.org>  Mon, 23 May 2011 10:35:42 -0600
 
